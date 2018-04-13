@@ -1,0 +1,17 @@
+[[plugins]]
+repo   = 'Shougo/unite.vim'
+
+[[plugins]]
+repo      = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
+
+[[plugins]]
+repo = "davidhalter/jedi-vim"
+on_ft = ['python']
+
+[[plugins]]
+repo = "scrooloose/syntastic"
+
+[[plugins]]
+repo = "zah/nim.vim"
+on_ft = ['nim']
