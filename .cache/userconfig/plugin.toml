@@ -3,3 +3,12 @@
 
  [[plugins]]
  repo = 'Shougo/vimproc.vim'
+
+ [[plugins]]
+ repo = 'thinca/vim-quickrun'
+
+ [[plugins]]
+ repo = 'yuratomo/w3m.vim'
+
+ [[plugins]]
+ repo = 'kana/vim-smartinput'

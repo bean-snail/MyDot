@@ -13,14 +13,18 @@ set hlsearch            " 検索マッチテキストをハイライト
 set showmatch
 " Swapファイル？Backupファイル？前時代的すぎ
 " なので全て無効化する
- set nowritebackup
- set nobackup
- set noswapfile
+" set nowritebackup
+" set nobackup
+" set noswapfile
  " 入力モード中に素早くjjと入力した場合はESCとみなす
   inoremap jj <Esc>
 " ESCを二回押すことでハイライトを消す
-" nmap <silent> <Esc><Esc> :nohlsearch<CR>
+nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
+"let mapleader = "\<Space>"
+noremap [Quickrun]    <Nop>
+map      <Space>r   [Quickrun]
+map [Quickrun]r <Plug>(quickrun)
 
 fun! JumpToDef()
 if exists("*GotoDefinition_" . &filetype)
@@ -33,7 +37,6 @@ endf
 " Jump to tag
   nn <M-g> :call JumpToDef()<cr>
   ino <M-g> <esc>:call JumpToDef()<cr>i
-
 
 "dein Scripts-----------------------------
 	if &compatible
@@ -76,4 +79,21 @@ endf
           call dein#install()
         endif
 "End dein Scripts-------------------------
+
+"プラグインのアンインストール
+"call map(dein#check_clean(), "delete(v:val, 'rf')")
+
+"Qfixhowm
+" qfixappにruntimepathを通す(パスは環境に合わせてください)
+set runtimepath+=~/.cache/qfixhowmapp/qfixhowm-master
+
+" キーマップリーダー
+let QFixHowm_Key = 'g'
+
+" howm_dirはファイルを保存したいディレクトリを設定
+let howm_dir             = '~/howm'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_fileencoding    = 'utf-8'
+let howm_fileformat      = 'unix'
+let MyGrep_DefaultSearchWord = 1
 

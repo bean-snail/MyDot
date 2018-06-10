@@ -1,2 +1,2 @@
 100
-['Shougo/dein.vim', 'Shougo/neomru.vim', 'Shougo/unite.vim', 'Shougo/vimproc.vim', 'davidhalter/jedi-vim', 'scrooloose/syntastic', 'zah/nim.vim']
+['Shougo/dein.vim', 'Shougo/neomru.vim', 'Shougo/unite.vim', 'Shougo/vimproc.vim', 'davidhalter/jedi-vim', 'kana/vim-smartinput', 'scrooloose/syntastic', 'thinca/vim-quickrun', 'yuratomo/w3m.vim', 'zah/nim.vim']
